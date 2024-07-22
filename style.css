@@ -1,0 +1,60 @@
+body {
+    background-image: url('FAQ.webp');
+    height: 1000px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 65%;
+    background-color: white;
+    opacity: 0.85;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.page .page-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.page .content-container .question {
+    padding: 18px 0px;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.page .content-container .question::after {
+    content: '+';
+    position: absolute;
+    right: -5px;
+}
+
+.page .content-container .answer {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.page .content-container.active .answer {
+    height: 150px;
+}
+
+.page .content-container.active .question {
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.page .content-container.active .question::after {
+    content: '-';
+    font-size: 30px;
+    transition: 0.5s;
+}
